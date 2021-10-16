@@ -24,8 +24,21 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: NewHomePage(),
     );
+  }
+}
+
+class NewHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text("FlutterDemo")),
+        body: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: ListView(),
+        ));
   }
 }
 
