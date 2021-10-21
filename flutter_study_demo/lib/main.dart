@@ -30,14 +30,25 @@ class MyApp extends StatelessWidget {
   }
 }
 
+@immutable
 class NewHomePage extends StatelessWidget {
+  const NewHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("FlutterDemo")),
+        appBar: AppBar(title: const Text("FlutterDemo")),
         body: Container(
           padding: const EdgeInsets.all(10.0),
-          child: ListView(),
+          child: ListView(
+            children: <Widget>[
+              ListTile(
+                title: const Text("Label"),
+              ),
+              ListTile(
+                title: const Text("imageView"),
+              ),
+            ],
+          ),
         ));
   }
 }
